@@ -1,9 +1,9 @@
 FROM node:14.20-alpine as build-step
 RUN mkdir -p /app
 WORKDIR /app
-COPY FrontendSolutions/package.json /app
+COPY package.json /app
 RUN npm install
-COPY FrontendSolutions /app
+COPY . /app
 RUN npm i && npm run build
 
 # Stage 2
