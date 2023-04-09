@@ -5,5 +5,4 @@ export const environment = {
     baseApiUrlavail:"https://localhost:7068/api",
     baseApiUrlallergy:"https://localhost:7225/api",
     baseApiUrlAudit:"https://localhost:7157/api",
-
 };
