@@ -1,6 +1,6 @@
 export const environment = {
     production:true,
-    baseApiUrl:"http://localhost:7098/api",
+    baseApiUrl:"https://patservices.azurewebsites.net/api",
     baseApiUrl1:"https://localhost:7078/api",
     baseApiUrlavail:"https://localhost:7068/api",
     baseApiUrlallergy:"https://localhost:7225/api",
