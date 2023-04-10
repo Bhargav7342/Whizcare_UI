@@ -28,7 +28,18 @@
     bottom: 0;
     
   }
+  h1{
+   
+    font-size: 1.5vw;
+    font-weight: 450;
+    line-height: 0%;
+  }
+  p{
+    font-size: 1vw;
+    line-height: 100%;
+  }
   .fottercon{
+    
     text-align: center;
     color: white;
     font-size: 1vw;
