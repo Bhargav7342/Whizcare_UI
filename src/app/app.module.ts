@@ -65,6 +65,7 @@ import { PasswordchangeComponent } from './Snackbars/passwordchange/passwordchan
 import { WrongpasswordComponent } from './Snackbars/wrongpassword/wrongpassword.component';
 import { BookedComponent } from './Snackbars/booked/booked.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule } from 'ngx-ui-loader';
 
 
 @NgModule({
@@ -145,7 +146,11 @@ import {MatBadgeModule} from '@angular/material/badge';
     HttpClientModule,
     MatMomentDateModule,
     MatSnackBarModule,
-    MatBadgeModule
+    MatBadgeModule,
+    NgxUiLoaderModule.forRoot({
+      bgsColor:"#a01db7"
+    }),
+    NgxUiLoaderHttpModule,
 
   ],
   
