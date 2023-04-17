@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy container app to Azure Web App - whizcare
+name: Build and deploy container app to Azure Web App - whizcarehospital
 
 on:
   push:
@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_f666531faf82478097c93c9d94e796e7 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_bace5167087b41a1b1d47e571afff33b }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_634a3cb52a804f1898b013db782a04f4 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_c1c30840b7274d2a9867a6765accef25 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_f666531faf82478097c93c9d94e796e7 }}/whizcare-ui:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_634a3cb52a804f1898b013db782a04f4 }}/whizcare-ui:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -45,7 +45,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'whizcare'
+        app-name: 'whizcarehospital'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f1b546462e7344098a1917b4fe1cccbc }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_f666531faf82478097c93c9d94e796e7 }}/whizcare-ui:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0e7bd9f8e87743d2aa858f22fc16fd17 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_634a3cb52a804f1898b013db782a04f4 }}/whizcare-ui:${{ github.sha }}'

@@ -1,6 +1,7 @@
 
 <h2 class="size">Visit History</h2>
-
+<h1 *ngIf="health.length==0;else elsepart" style="margin-left: 5%;">It looks like you are a new User, Please book your first Appointment</h1>
+<ng-template #elsepart >
 <div *ngFor="let h of health" >
 <mat-card style="width: 65%" class="firstCard">
 
@@ -28,3 +29,4 @@
 
 </mat-card>
 </div>
+</ng-template>
