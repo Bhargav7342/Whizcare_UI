@@ -47,7 +47,7 @@ export class DoctorService {
       'doc_id':docId,
       'dates':date
     });
-    return this.http.get<Appointment[]>(this.baseApiurl2+'/Appointment/GetAppointmentsAfterCheckup',{headers:header})
+    return this.http.get<Appointment[]>('https://appointmentserv.azurewebsites.net/api'+'/Appointment/GetAppointmentsAfterCheckup',{headers:header})
   }
   
   AddHealthHistory(diagnosis:HealthHistory):Observable<HealthHistory>
