@@ -1,8 +1,8 @@
 export const environment = {
     production:true,
-    baseApiUrl:"https://patservices.azurewebsites.net/api",
-    baseApiUrl1:"https://appointmentserv.azurewebsites.net/api",
-    baseApiUrlavail:"https://doctorserv.azurewebsites.net/api",
-    baseApiUrlallergy:"https://allergy.azurewebsites.net/api",
-    baseApiUrlAudit:"https://auditserve.azurewebsites.net/api",
+    baseApiUrl:"http://20.62.187.52/api",
+    baseApiUrl1:"http://20.62.187.52/api",
+    baseApiUrlavail:"http://20.62.187.52/api",
+    baseApiUrlallergy:"http://20.62.187.52/api",
+    baseApiUrlAudit:"http://20.62.187.52/api",
 };
