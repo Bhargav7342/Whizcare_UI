@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -7,5 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  
+  constructor(private router:Router){}
+  PatientLogin(){
+    // this.status="logout";
+    this.router.navigate(['/plogin']);
+  }
 }
